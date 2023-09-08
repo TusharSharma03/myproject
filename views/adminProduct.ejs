@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <nav>
+        <span class="main-text">Fashion Hub</span>
+        <span class="menu">
+            <a href="/adminProduct" class="header" id="product">Prdoucts</a>
+            <a href="/addProduct" class="header" id="addProduct">ADD Products</a>
+            <a href="/addCategory" class="header" id="addCategory">ADD Category</a>
+            <a href="/logout" class="header">Log Out</a>
+        </span>
+    </nav>
+        <div class="kurti" style="margin-top: 10%;align-content: center">
+            <% product.forEach(function(item){%>
+                <div id="img"><img src="<%= item.src%>" class="productImg"><br>
+                    <p class="input">Name:<input type="text" value="<%= item.name%>"></p>
+                    <p class="input">Price:<input type="text" value="<%= item.price%>"></p>
+                    <button class="remove">Remove</button>
+                    <button class="update">Update</button>
+                </div>
+            <%})%>
+        </div>  
+    <script src="./js/admin.js"></script>
+</body>
+</html>

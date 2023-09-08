@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>register</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <%-include('common/header')%>
+    <div class="login-interface">
+        <div>
+            <img src="../images/login.png" id="img1">
+        </div>
+        <div id="line">
+        </div>
+        <div class="cart">
+            <img src="../images/empty cart.png" id="img3">
+        </div>
+    </div>
+    <p class="loginLabel">REGISTER HERE</p>
+    <p class="message" ><%= message.pass %></p>
+    <form action="/register" method="POST" class="register" enctype="multipart/form-data" >
+        <div class="left">
+            <input type="text" name="fname" id="fname" placeholder="fname">
+            <input type="text" name="lname" id="lname" placeholder="lname">
+            <input type="text" name="email" id="email" placeholder="email">
+            <input type="text" name="phone" id="phone" placeholder="phone">
+        </div>
+        <div class="right">
+            <input type="password" name="password" id="password" placeholder="password">
+            <input type="password" name="currentPassword" id="currentPassword" placeholder="current password">
+            <input type="submit" name="submit" class="register">
+        </div> 
+    </form>
+    <script src="./js/login.js"></script>
+</body>
+</html>

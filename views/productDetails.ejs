@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product detail</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <%-include("common/header")%>
+    <div id="img-detail"><img src="<%= detail.src %>" style="width: 30%;border-radius: 10px;"><br>
+        <div class="detail">
+            <span class="productName"><%= detail.name%></span><br>
+            DESCRIPTION:<div class="description"><%= detail.description%></div><br>
+            Rs.<span><%= detail.price%></span><br>
+            <button class="addToCart">ADD To Cart</button>
+        </div>
+    </div>
+    <%-include('common/footer')%>
+    <script src="./js/cart.js"></script>
+    <script src="./js/project.js"></script>
+</body>
+</html>

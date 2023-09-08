@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <%-include('common/header')%>
+        <h2 class="txt">Everyone Has A Style Statement</h2>
+        <h1 class="col">FIND YOURS HERE!</h1>
+        <div class="back">
+            <img class="img" src="images/dress.jpg">
+        </div>
+            <div class="kurti">
+                <% result.forEach(function(product){%>
+                    <a href="/getdetail"><div id="img"><img src="<%= product.src %>" style="width: 100%;border-radius: 10px;"><br>
+                        <span><%= product.name%></span><br>
+                        Rs.<span><%= product.price%></span><br>
+                        <!-- <button class="addToCart" >ADD To Cart</button> -->
+                    </div></a> 
+                <%})%>   
+            </div>
+<!--  
+                <div id="img"><img src="images/jeans3.jpg"><br>
+                    <span>Calvin klein jeans</span><br>
+                    <span>Rs.519</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/jeans4.jpg"><br>
+                    <span>LOCOMOTIVE Mean Slim fit jeans</span><br>
+                    <span>Rs.999</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+           </div>
+            <div class="joggers">
+                <div id="img"><img src="images/joggers1 (1).jpg"><br>
+                    <span>HRX Men Solid joggers </span><br>
+                    <span>Rs.934</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/joggers1 (2).jpg"><br>
+                    <span>HRX Men Solid joggers</span><br>
+                    <span>Rs.950</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/joggers1 (3).jpg"><br>
+                    <span>HRX Men Solid joggers</span><br>
+                    <span>Rs.499</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/joggers1 (4).jpg"><br>
+                    <span>HRX Men Solid joggers</span><br>
+                    <span>Rs.700</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+           </div>
+           <div class="shoes">
+                <div id="img"><img src="images/shoe1.jpg"><br>
+                    <span>PUMA Men Clasp IDP Sneakers</span><br>
+                    <span>Rs.1304</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/shoe2.jpg"><br>
+                    <span>Levis Men Sneakers</span><br>
+                    <span>Rs.1169</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/shoe3.jpg"><br>
+                    <span>Mactree Men Sneakers</span><br>
+                    <span>Rs.679</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div>
+                <div id="img"><img src="images/shoe4.jpg" ><br>
+                    <span>HRX Men Pro Sneakers</span><br>
+                    <span>Rs.1699</span><br>
+                    <button class="addToCart">ADD To Cart</button>
+                </div> --> 
+            <!-- </div><br> -->
+            <%-include('common/footer')%>
+            <script src="./js/project.js"></script>
+            <script src="./js/product.js"></script>
+            <script>document.getElementById('product').style.color = "#f84258"</script>
+</body>
+
+</html>

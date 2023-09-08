@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>add product</title>
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <nav>
+    <span class="main-text">Fashion Hub</span>
+        <span class="menu">
+            <a href="/adminProduct" class="header" id="product">Prdoucts</a>
+            <a href="/addProduct" class="header" id="addProduct">ADD Products</a>
+            <a href="/addCategory" class="header" id="addCategory">ADD Category</a>
+            <a href="/logout" class="header">Log Out</a>
+        </span>
+    </nav>
+    <form class="pr_form" method="POST" enctype="multipart/form-data" action="/addProduct">
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Name</span><span class="form-control"><input type="text" name="name" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Description</span><span class="form-control"><input type="text"  name="Description" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product price</span><span class="form-control"><input type="number" name="price" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Quantity</span><span class="form-control"><input type="text" name="quantity" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Category</span><span class="form-control"><input type="text" name="Category" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Type</span><span class="form-control"><input type="text" name="type" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product is for</span><span class="form-control"><input type="text" name="gender" class="input"></span></div>
+        <div class="mb-3"><span class="labelInput" style="width: 20%;">Product Image</span><span class="form-control"><input type="file" name="files" class="input"></span></div>
+        <input type="submit" style="margin-left: 20%;border: none;background-color: #f84258;" class="input">
+      </form>
+  </body>
+</html>

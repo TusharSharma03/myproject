@@ -1,0 +1,83 @@
+<!Doctype>
+ <html>
+    <link rel="stylesheet" href="project.css">
+    <body>
+        <%-include('common/header')%>
+        <h1 class="cat">Unskippable Categories</h1>
+        <hr class="hr">
+        <img class="img" src="images/categorie.jpg">
+        </a>
+        <h2 class="cat">TRENDING NOW</h2><br>
+        <div class="kurti">
+          <% result.forEach((category)=>{%>
+                <a href="/findproduct"><img src="<%=category.src%>" onmouseover="show('<%=category.name%>')"></a>          
+        <%}) %>
+        </div> 
+         <!--  <div class="marg1" onclick="show('ethnicwear')">
+                <img src="images/category2.jpg">
+            </a>
+            </div>
+            <div class="marg1" onclick="show('footwear')">
+                <img src="images/category3.jpg">
+                </a>
+             </div> -->
+        <!-- <div id="dis">
+            <div class="marg" onclick="show('heels')">
+                
+                <img src="images/category4.jpg">
+                </a>
+            </div>
+            <div class="marg1"onclick="show('watches')">
+                
+                <img src="images/category5.jpg">
+                </a>
+            </div>
+            <div class="marg1" onclick="show('formal')">
+                
+                <img src="images/category6.jpg">
+                </a>
+            </div>
+        </div>
+        <h2 class="cat">+For Her</h2>
+        <div id="dis">
+            <div class="marg"onclick="show('Bohemian')">
+                
+                <img src="images/for-her1.png">
+                </a>
+            </div>
+            <div class="marg" onclick="show('western')">
+                
+                <img src="images/for-her2.png">
+                </a>
+            </div>
+        </div>
+        <h2 class="cat">+For Him</h2>
+        <div id="dis">
+            <div class="marg" onclick="show('shirts')" >
+                
+                <img src="images/brands-for-him1.png">
+                </a>
+            </div>
+            <div class="marg2" onclick="show('shoes')">
+                
+                <img src="images/brands-for-him2.png">
+            </div>
+            <div class="marg2" onclick="show('bags')">
+                
+                <img src="images/brands-for-him3.png">
+            </div>
+            <div class="marg2" onclick="show('shirt')">
+                
+                <img src="images/brands-for-him4.png">
+                </a>
+            </div>
+            <div class="marg2" onclick="show('shirt')">
+                
+                <img src="images/brands-for-him5.png">
+                </a>
+            </div>
+        </div>  -->
+        <%-include('common/footer')%>
+        <script src="./js/project.js"></script>   
+    </body>
+ </html>

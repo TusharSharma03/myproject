@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body style="background-color:#eceaea;;">
+    <%-include('common/header')%>
+    <h3 class="txt1">Uh-Oh! We Are <span class="col1">done🛒</span></h3>
+           <hr class="hr"><br><br>
+           <div class="cart_block">
+            <h2 class="col1">Your Cart</h2>
+            <hr class="hr1">
+            <br>
+            <div class="orderDetails">
+                <span>Sub Total:</span>______________<br><span><%=price%></span>
+                <span class="updatedtotal"><%=quantityPrice%></span>
+                <button class="buyOrder">Proceed to buy</button>
+            </div>
+            <div id="productList">
+            <ul>
+                <%result.forEach(function(item){%>
+                <li>
+                    <div class="product"> 
+                        <button class="cross">X</button>
+                        <span ><img src="<%= item.src%>" class="cart_pr_img"></span>
+                        <div class="itemDetails">
+                            <span><%= item.name%></span><br>
+                            <span>quantity: <input type="number" placeholder="<%= item.quantity%>" value="<%= item.quantity%>" id="quantity" min="1" ></span>
+                            <br>Rs.<span><%= item.price%></span>
+                            <span class="updatedPrice"><%= item.price*item.quantity%></span>
+                        </div>
+                    </div>
+                </li>
+                <%})%>
+            </ul>
+        </div>
+            <button class="btn-clear" onclick="emptylist()">
+            <span class="col1">Clear My List</span>
+            </button>
+            <br>
+            <br>
+            <small>"Can't see anything! Click & add your favourite fashion in "
+                <span class="col1">Shopping List!</span>
+            </small>
+           </div>
+           <br><br><br>
+        </div>
+        <script src="js/project.js"></script>
+        <script src="./js/cart.js"></script>
+        <!-- <script>
+            var data={};
+            function add(){  
+             fetch("/getCart").then((data)=>{
+                return data.json();
+                }).then((result)=>{
+                    data = result;
+                    console.log()
+                })
+            }
+        </script> -->
+        <script>document.querySelector('.orderCart').style.display="none";</script>
+</body>
+</html>

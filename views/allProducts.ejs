@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <%-include('common/header')%>
+        <h2 class="txt">Everyone Has A Style Statement</h2>
+        <h1 class="col">FIND YOURS HERE!</h1>
+        <div class="back">
+            <img class="img" src="images/dress.jpg">
+        </div>
+            <div class="kurti">
+                <% categoryProduct.forEach(function(product){%>
+                    <a href="/getdetail"><div id="img"><img src="<%= product.src %>" style="width: 100%;border-radius: 10px;"><br>
+                        <span><%= product.name%></span><br>
+                        Rs.<span><%= product.price%></span><br>
+                        <!-- <button class="addToCart" >ADD To Cart</button> -->
+                    </div></a> 
+                <%})%>   
+            </div>
+            <%-include('common/footer')%>
+            <script src="./js/project.js"></script>
+            <script src="./js/product.js"></script>
+            <script>document.getElementById('product').style.color = "#f84258"</script>
+</body>
+</html>
