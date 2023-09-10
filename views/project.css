@@ -1,3 +1,6 @@
+body{
+    background-color: darkgray;
+}
 .main{
     font-family:'Beth Ellen', cursive;
     font-size: 36px;
@@ -420,6 +423,7 @@ border: none;
     font-family: cursive;
     font-size: small;
     width: 70%;
+    /* height: 50%; */
     background-color: white;
     align-content: center;
     border-radius: 10px;

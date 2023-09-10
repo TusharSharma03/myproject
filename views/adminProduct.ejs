@@ -18,7 +18,7 @@
     </nav>
         <div class="kurti" style="margin-top: 10%;align-content: center">
             <% product.forEach(function(item){%>
-                <div id="img"><img src="<%= item.src%>" class="productImg"><br>
+                <div id="img" style="height: 400px;"><img src="<%= item.src%>" style="height: 35%;" class="productImg"><br>
                     <p class="input">Name:<input type="text" value="<%= item.name%>"></p>
                     <p class="input">Price:<input type="text" value="<%= item.price%>"></p>
                     <button class="remove">Remove</button>

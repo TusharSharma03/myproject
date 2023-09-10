@@ -20,18 +20,18 @@ span.innerHTML = `<a href="/cart"  onmouseout="out()"><img src="./images/cart.PN
 menu.append(span);
 
 
-function hover() {
-    let cart = document.querySelector('.orderCart');
-    cart.innerHTML = `<a href="/cart"><img src="./images/hoverCart.PNG" class="order-cart"></a>`
-};
-function hover() {
-    let cart = document.querySelector('.orderCart');
-    cart.innerHTML = `<a href="/cart" onmouseout="out()"><img src="./images/hoverCart.PNG" class="order-cart"></a>`;
-}
+// function hover() {
+//     let cart = document.querySelector('.orderCart');
+//     cart.innerHTML = `<a href="/cart"><img src="./images/hoverCart.PNG" class="order-cart"></a>`
+// };
+// function hover() {
+//     let cart = document.querySelector('.orderCart');
+//     cart.innerHTML = `<a href="/cart" onmouseout="out()"><img src="./images/hoverCart.PNG" class="order-cart"></a>`;
+// }
 
-function out() {
-    document.querySelector('.orderCart').innerHTML = `<a href="/cart"  onmouseover="hover()"><img src="./images/cart.PNG" class="order-cart"></a>`
-}
+// function out() {
+//     document.querySelector('.orderCart').innerHTML = `<a href="/cart"  onmouseover="hover()"><img src="./images/cart.PNG" class="order-cart"></a>`
+// }
 
 
 // slide show 

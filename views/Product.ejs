@@ -12,11 +12,11 @@
         <h2 class="txt">Everyone Has A Style Statement</h2>
         <h1 class="col">FIND YOURS HERE!</h1>
         <div class="back">
-            <img class="img" src="images/dress.jpg">
+            <img class="img" src="images/bann1.jpg" style=" margin-left: 0;width: 100%;">
         </div>
             <div class="kurti">
                 <% result.forEach(function(product){%>
-                    <a href="/getdetail"><div id="img"><img src="<%= product.src %>" style="width: 100%;border-radius: 10px;"><br>
+                    <a href="/getdetail"><div id="img"><img src="<%= product.src %>" style="height: 50%;width: 100%;border-radius: 10px;"><br>
                         <span><%= product.name%></span><br>
                         Rs.<span><%= product.price%></span><br>
                         <!-- <button class="addToCart" >ADD To Cart</button> -->
