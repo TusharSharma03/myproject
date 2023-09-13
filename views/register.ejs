@@ -6,17 +6,17 @@
 </head>
 <body>
     <%-include('common/header')%>
-    <div class="login-interface">
-        <div>
+    <div class="login-interface" style="width: 80%;height: 100%;margin-left: 10%;">
+        <!-- <div>
             <img src="../images/login.png" id="img1">
         </div>
         <div id="line">
         </div>
         <div class="cart">
             <img src="../images/empty cart.png" id="img3">
-        </div>
-    </div>
-    <p class="loginLabel">REGISTER HERE</p>
+        </div> -->
+    <!-- </div> -->
+    <p class="loginLabel" style="color: white;font-weight: bolder;font-size: 30px;margin-left: 35%;">REGISTER HERE</p>
     <p class="message" ><%= message.pass %></p>
     <form action="/register" method="POST" class="register" enctype="multipart/form-data" >
         <div class="left">
@@ -31,6 +31,7 @@
             <input type="submit" name="submit" class="register">
         </div> 
     </form>
+    </div>
     <script src="./js/login.js"></script>
 </body>
 </html>

@@ -61,9 +61,16 @@ nav{
     font-size: 20px;
 }
 .login-interface{
-    display: flex;
-    justify-content: space-evenly;
-    height: 500px;
+    /* display: flex;
+    justify-content: space-evenly; */
+    margin-top: 10%;
+    margin-left: 20%;
+    background-image: url('./images/loginpic.jpg');
+    /* height: 500px; */
+    /* height: 80%; */
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 #img1{
     margin-top: 20%;
@@ -141,6 +148,7 @@ input{
     padding: 7px;
     margin: 10px;
     border-radius: 5px;
+    width: 100%;
 }
 .input{
     padding: 7px;

@@ -9,15 +9,15 @@
 <body>
     <%-include('common/header')%>
     <div class="login-interface">
-        <div>
+        <!-- <div>
             <img src="../images/banner1.jpg" id="img1">
-        </div>
-        <div id="line">
-        </div>
-        <div class="cart">
+        </div> -->
+        <!-- <div id="line"> -->
+        <!-- </div> -->
+        <!-- <div class="cart">
             <img src="../images/OIP.jpg" id="img3">
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
         <p class="loginLabel">LOGIN HERE 🦄</p>
         <%if(msg!=''){%>
             <p class="message"><%= msg %></p>
@@ -28,6 +28,7 @@
             <input type="submit" id="submit" value="Sign In">
             <button id="register"><a href="/register" style="text-decoration: none;">Register</a></button>
         </form>
+    </div>
         <%-include('common/footer')%>
         <script src="./js/login.js"></script>
     </body>
