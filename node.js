@@ -366,12 +366,46 @@ app.post('/register', upload, (req, res) => {
                     res.redirect('/');
                 }
             })
+               let username = req.body.email;
+            // let username = req.body.Username;
+            // let password = req.body.password;
+            // let result = await newuser.findOne({ email: username });
+            // let matchPass = await bcrypt.compare(password, result.password);
+            // if (matchPass) {
+                if (username!="sharma.tushar2213@gmail.com") {
+                    
+                    sess = req.session;
+                    // sess.name = name;
+                    sess.email = username;
+                    if (req.session.email) {
+                        res.render('home');
+                    }
+                }
+               else{
+                    sess = req.session;
+                    // sess.name = name;
+                    sess.email = username;
+                    if (req.session.email) {
+                        res.redirect('/adminProduct');
+                    }
+                   else{
+                    res.redirect('/');
+                   }
+               }
+            // } else {
+            //     req.flash('message','Invalid login details')
+            //     res.redirect('/');
+            // }
+
         }
         data();
     } else {
         const message = { pass: 'paasword and confirm password should be same' };
         res.redirect('register', { message });
     }
+
+    
+
 })
 
 //route for product details

@@ -10,11 +10,12 @@
 
 <body style="background-color:#eceaea;;">
     <%-include('common/header')%>
-        <h3 class="txt1">Uh-Oh! We Are <span class="col1">done🛒</span></h3>
-        <hr class="hr"><br><br>
+        <h3 class="txt1" style="margin-top: 5%;">Your Cart <span class="col1">🛒</span></h3>
+        <hr style="margin-top:5px;font-weight: 900;">
+        <!-- <hr class="hr"><br><br> -->
         <div class="cart_block">
-            <h2 class="col1">Your Cart</h2>
-            <hr class="hr1">
+            <!-- <h2 class="col1">Your Cart</h2> -->
+            <!-- <hr class="hr1"> -->
             <br>
             <div class="orderDetails">
                 <span>Sub Total:</span>______________<br><span>
@@ -23,8 +24,8 @@
                 <span class="updatedtotal">
                     <%=quantityPrice%>
                 </span>
-                <button class="buyOrder">Proceed to buy</button>
-                <button id="rzp-button1">Pay with Razorpay</button>
+                <button class="buyOrder" id="rzp-button1">Proceed to buy</button>
+                <!-- <button id="rzp-button1">Pay with Razorpay</button> -->
                 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
             </div>
             <div id="productList">
@@ -52,14 +53,14 @@
                         <%})%>
                 </ul>
             </div>
-            <button class="btn-clear" onclick="emptylist()">
+            <!-- <button class="btn-clear" onclick="emptylist()">
                 <span class="col1">Clear My List</span>
-            </button>
+            </button> -->
             <br>
             <br>
-            <small>"Can't see anything! Click & add your favourite fashion in "
+            <!-- <small>"Can't see anything! Click & add your favourite fashion in "
                 <span class="col1">Shopping List!</span>
-            </small>
+            </small> -->
         </div>
         <br><br><br>
         </div>
