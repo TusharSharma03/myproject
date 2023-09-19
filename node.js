@@ -13,6 +13,7 @@ const cartProduct = require('./views/mongoose/cart.js');
 const session = require('express-session');
 const flash = require('connect-flash');
 const category = require('./views/mongoose/categories');
+const Razorpay = require('razorpay');
 
 
 app.set("view engine", 'ejs');
@@ -31,6 +32,25 @@ app.use(function(req,res,next)
     console.log(req.method,req.url);
     next();
 })
+
+// razorpay instance
+var instance = new Razorpay({
+    key_id: 'rzp_test_Iu8SvEOqXPXFQX',
+    key_secret: 'hxMaAkADsUE2K0wSjNE9RIz3',
+  });
+
+  app.post('/create/orderId',(req,res)=>{
+    console.log("create orderId",req.body);
+    var options = {
+        amount: req.body.amount,  // amount in the smallest currency unit
+        currency: "INR",
+        receipt: "rcpt1"
+      };
+      instance.orders.create(options, function(err, order) {
+        console.log(order);
+        res.send({orderId : order.id});
+      });
+  })
 
 //add items to the cart
 app.post('/cart', async (req, res) => {
@@ -320,12 +340,12 @@ app.post('/register', upload, (req, res) => {
                 secure: false,
                 requireTLS: true,
                 auth: {
-                    user: "tanish.tyagi98134@gmail.com",
-                    pass: 'tgmianrbqhqfawho'
+                    user: "umesh.atrii0712@gmail.com",
+                    pass: 'zscojnmjdcbisfwo'
                 }
             });
             var mailOptions = {
-                from: 'tanish.tyagi98134@gmail.com',
+                from: 'umesh.atrii0712@gmail.com',
                 to: req.body.email,
                 html: `  <!DOCTYPE html>
                         <html lang="en">
@@ -335,7 +355,7 @@ app.post('/register', upload, (req, res) => {
                         <title>Document</title>
                         </head>
                         <body style="text-align: center;">
-                        <h1 style="text-align: center;">Thankyou ${req.body.fname + " " + req.body.lname}for your Submission</h1>`,
+                        <h1 style="text-align: center;">Thankyou ${req.body.fname + " " + req.body.lname} for your Submission</h1>`,
                 subject: 'thank you'
             };
             transporter.sendMail(mailOptions, (err) => {
@@ -343,6 +363,7 @@ app.post('/register', upload, (req, res) => {
                     console.log(err);
                 } else {
                     console.log("sent");
+                    res.redirect('/');
                 }
             })
         }

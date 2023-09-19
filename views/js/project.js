@@ -1,9 +1,8 @@
 let login = document.querySelector("#login");
 const menu = document.querySelector('.menu');
 
-
-menu.removeChild(menu.children[4]);
-menu.removeChild(menu.children[4]);
+menu.removeChild(menu.children[3]);
+menu.removeChild(menu.children[3]);
 
 let link = document.createElement('span');
 link.innerHTML = `<a href="/profile" class="header">Profile</a>`;
